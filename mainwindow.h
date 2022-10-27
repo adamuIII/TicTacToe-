@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <options.h>
+#include <game.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,7 +24,11 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void moveHome();
+
 private:
     Ui::MainWindow *ui;
+    Options options;
+    Game game;
 };
 #endif // MAINWINDOW_H
