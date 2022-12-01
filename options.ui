@@ -49,7 +49,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>Musiv volume</string>
+      <string>Music volume</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -103,14 +103,46 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>430</y>
+       <x>350</x>
+       <y>490</y>
        <width>83</width>
        <height>29</height>
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Exit</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>330</y>
+       <width>221</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#lineEdit_2 {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:2px;
+	border:2px solid #22473b;
+	color:#ffffff;
+	font-family:Rockwell Extra Bold;
+	font-size:25px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}</string>
+     </property>
+     <property name="text">
+      <string>Music volume</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
