@@ -16,13 +16,13 @@ public:
     ~Options();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_back_button_clicked();
 
 private:
     Ui::Options *ui;
 
 signals:
-    void BackClicked();
+    void HomeClicked();
 };
 
 

@@ -10,6 +10,12 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>16777215</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -30,6 +36,9 @@ background-repeat:no-repeat, no-repeat;
 }
 
 </string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -59,7 +68,7 @@ background-repeat:no-repeat, no-repeat;
        <string>Tic-Tac-Toe</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="choose_game_type_button">
       <property name="geometry">
        <rect>
         <x>150</x>
@@ -128,7 +137,7 @@ background-repeat:no-repeat, no-repeat;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="settings_button">
       <property name="geometry">
        <rect>
         <x>150</x>
@@ -175,7 +184,7 @@ background-repeat:no-repeat, no-repeat;
        <string>Settings</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="quit_button">
       <property name="geometry">
        <rect>
         <x>150</x>
@@ -187,7 +196,6 @@ background-repeat:no-repeat, no-repeat;
       <property name="font">
        <font>
         <family>Rockwell Extra 13</family>
-        <pointsize>-1</pointsize>
         <bold>true</bold>
         <underline>false</underline>
         <strikeout>false</strikeout>
@@ -219,22 +227,11 @@ background-repeat:no-repeat, no-repeat;
 }</string>
       </property>
       <property name="text">
-       <string>Exit</string>
+       <string>Quit</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2">
-     <widget class="QCalendarWidget" name="calendarWidget">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>130</y>
-        <width>368</width>
-        <height>195</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
+    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -243,7 +240,7 @@ background-repeat:no-repeat, no-repeat;
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -1,11 +1,14 @@
-#include "mainwindow.h"
+#include "application.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
-    MainWindow w;
+    Application w;
+    w.setGeometry(0,0,800,600);
+
     w.show();
     return a.exec();
 }

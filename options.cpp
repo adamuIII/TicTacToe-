@@ -16,8 +16,8 @@ Options::~Options()
 
 
 
-void Options::on_pushButton_clicked()
+void Options::on_back_button_clicked()
 {
-    emit BackClicked();
+    emit HomeClicked();
 }
 
