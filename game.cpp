@@ -7,6 +7,10 @@ Game::Game(QWidget *parent) :
     gameplay(new Gameplay)
 {
     ui->setupUi(this);
+
+    ui->stackedWidget->setCurrentIndex(1);
+
+
 }
 
 Game::~Game()
@@ -40,6 +44,11 @@ void Game::updateScreen(){
     }
 
 
+}
+
+void Game::on_back_button_game_choose_clicked()
+{
+    emit HomeClicked();
 }
 
 
@@ -114,5 +123,24 @@ void Game::on_pushButton_22_clicked()
     gameplay->put(2,2);
     ui->pushButton_22->setText(gameplay->getWhosTurn());
     updateScreen();
+}
+
+
+void Game::on_back_button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+
+void Game::on_start_server_button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void Game::on_connect_to_server_button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }
 

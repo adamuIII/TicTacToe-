@@ -35,11 +35,25 @@ private slots:
 
     void on_pushButton_21_clicked();
 
+    void makeMove(int row, int column, int player);
+
+    void on_back_button_clicked();
+
+
+    void on_back_button_game_choose_clicked();
+
+    void on_start_server_button_clicked();
+
+    void on_connect_to_server_button_clicked();
+
 private:
     Ui::Game *ui;
     Gameplay *gameplay;
 
     void updateScreen();
+
+signals:
+    void HomeClicked();
 };
 
 #endif // GAME_H

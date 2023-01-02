@@ -24,6 +24,8 @@ private slots:
     void on_options_button_clicked();
     void on_quit_button_clicked();
     void moveHome();
+    void moveHome2();
+
 
 private:
     Ui::Application *ui;
