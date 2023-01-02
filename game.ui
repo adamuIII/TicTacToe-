@@ -29,7 +29,7 @@
       <bool>true</bool>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page_3">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -55,7 +55,7 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
-            <widget class="QPushButton" name="back_button_game_choose">
+            <widget class="QPushButton" name="back_btn1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -121,7 +121,7 @@
               </spacer>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_4">
+              <widget class="QLineEdit" name="port_nr_create_edit">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -187,7 +187,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_5">
+              <widget class="QLineEdit" name="ip_address_edit">
                <property name="text">
                 <string>127.0.0.1</string>
                </property>
@@ -208,7 +208,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_6">
+              <widget class="QLineEdit" name="port_nr_connect_edit">
                <property name="text">
                 <string>5001</string>
                </property>
@@ -257,7 +257,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QListView" name="listView">
+              <widget class="QTextBrowser" name="server_status_list_event">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>

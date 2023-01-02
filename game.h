@@ -1,7 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <QtNetwork/QTcpServer>
+#include <QtNetwork/QTcpSocket>
+#include <QDebug>
 #include <QWidget>
+#include <QMessageBox>
+#include <QSet>
+#include <QInputDialog>
 #include "gameplay.h"
 
 namespace Ui {
@@ -34,26 +40,42 @@ private slots:
     void on_pushButton_11_clicked();
 
     void on_pushButton_21_clicked();
-
     void makeMove(int row, int column, int player);
 
+    void newConnection();
     void on_back_button_clicked();
 
 
-    void on_back_button_game_choose_clicked();
+    void appendToSocketList(QTcpSocket* socket);
+    void readSocket();
+    void discardSocket();
+    void displayError(QAbstractSocket::SocketError socketError);
+
+    void displayMessage(const QString& str);
+
+//    void sendMessage(QTcpSocket* socket);
+
 
     void on_start_server_button_clicked();
 
+
+    void on_back_btn1_clicked();
+
     void on_connect_to_server_button_clicked();
+
+    void connected_to_server();
 
 private:
     Ui::Game *ui;
-    Gameplay *gameplay;
-
+    Gameplay *gameplay; 
+    QTcpServer* m_server;
+    QSet<QTcpSocket*> connection_set;
     void updateScreen();
+    QTcpSocket* connect_socket;
 
 signals:
     void HomeClicked();
+    void newMessage(QString);
 };
 
 #endif // GAME_H
