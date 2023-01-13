@@ -7,9 +7,10 @@
 #include "tictactoeserver.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class TicTacToeMainWindow; }
+namespace Ui {
+class TicTacToeMainWindow;
+}
 QT_END_NAMESPACE
-
 
 class Cell
 {
@@ -27,29 +28,22 @@ class TicTacToeServer;
 class TicTacToeMainWindow : public QMainWindow
 {
     Q_OBJECT
-
     QTcpSocket *m_pClientSocket;
-
     TicTacToeServer* m_pBoxServer;
 
 public:
-
     Cell CellArray[3][3];
     QString  Message;
     int sizeOfGrid = 3;
 
-
     TicTacToeMainWindow(QWidget *parent = nullptr);
     ~TicTacToeMainWindow();
-
-    void DisplayRemotePCMessage(QString remoteMove);
-
-
     void DisplayStatusMessage(QString Message);
+    void DisplayRemotePCMessage(QString remoteMove);
+    void SendMovesToRemotePC(QString Message);
+    void displayError(QAbstractSocket::SocketError socketError);
 
-    void SendMovesToRemotePC(QString message);
-
-    void WinCheck();
+    void WinningLogicCheck();
 
     void NewGame();
 
@@ -67,18 +61,15 @@ protected:
 
     void mousePressEvent(QMouseEvent* ev);
 
+    QString CreateMessage();
 
 private slots:
     void on_pushButtonStart_clicked();
-
-    void on_pushButton_NewGame_OK_clicked();
-
-    void displayError(QAbstractSocket::SocketError socketError);
-
 
     void on_pushButtonConnect_clicked();
 
 private:
     Ui::TicTacToeMainWindow *ui;
 };
+
 #endif // TICTACTOEMAINWINDOW_H
