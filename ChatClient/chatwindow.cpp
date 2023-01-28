@@ -54,7 +54,7 @@ void ChatWindow::attemptConnection()
     // disable the connect button to prevent the user clicking it again
     ui->connectButton->setEnabled(false);
     // tell the client to connect to the host using the port 1967
-    m_chatClient->connectToServer(QHostAddress(hostAddress), 5001);
+    m_chatClient->connectToServer(QHostAddress(hostAddress), quint16(ui->portEdit->toPlainText().toInt()));
 }
 
 void ChatWindow::connectedToServer()
