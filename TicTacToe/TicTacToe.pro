@@ -1,11 +1,11 @@
-QT       += core gui
+QT       += core gui network widgets
 
-QT       += network
+TARGET = TicTacToe
+TEMPLATE = app
 
-QT       += widgets
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 6): QT += widgets
 
-CONFIG += c++17
+CONFIG += c++20
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -16,11 +16,11 @@ CONFIG += c++17
 SOURCES += \
         main.cpp \
         tictactoemainwindow.cpp \
-    tictactoeserver.cpp
+        tictactoeserver.cpp
 
 HEADERS += \
         tictactoemainwindow.h \
-    tictactoeserver.h
+        tictactoeserver.h
 
 FORMS += \
         tictactoemainwindow.ui
